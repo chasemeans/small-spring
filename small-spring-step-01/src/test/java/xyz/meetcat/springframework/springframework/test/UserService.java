@@ -1,4 +1,4 @@
-package xyz.meetcat.springframework.test;
+package xyz.meetcat.springframework.springframework.test;
 
 public class UserService {
 

@@ -1,4 +1,4 @@
-package xyz.meetcat.springframework;
+package xyz.meetcat.springframework.springframework;
 
 public class BeanDefinition {
 

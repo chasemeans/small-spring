@@ -1,7 +1,7 @@
-package xyz.meetcat.springframework.test;
+package xyz.meetcat.springframework.springframework.test;
 
-import xyz.meetcat.springframework.BeanDefinition;
-import xyz.meetcat.springframework.BeanFactory;
+import xyz.meetcat.springframework.springframework.BeanDefinition;
+import xyz.meetcat.springframework.springframework.BeanFactory;
 
 public class ApiTest {
 
