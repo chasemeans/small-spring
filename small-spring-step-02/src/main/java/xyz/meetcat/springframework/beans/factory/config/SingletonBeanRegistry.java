@@ -1,4 +1,6 @@
 package xyz.meetcat.springframework.beans.factory.config;
 
-public class SingletonBeanRegistry {
+public interface SingletonBeanRegistry {
+
+    Object getSingleton(String beanName);
 }

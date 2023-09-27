@@ -1,38 +1,29 @@
 package xyz.meetcat.springframework;
 
-import junit.framework.Test;
 import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import xyz.meetcat.springframework.beans.factory.config.BeanDefinition;
+import xyz.meetcat.springframework.beans.factory.support.DefaultListableBeanFactory;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
+public class AppTest extends TestCase {
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
+    public static void main(String[] args) throws Exception{
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+        DefaultListableBeanFactory factory = new DefaultListableBeanFactory();
+
+        BeanDefinition beanDefinition = new BeanDefinition(UserService.class);
+
+        factory.registerBeanDefinition("userService", beanDefinition);
+
+        UserService userService = (UserService) factory.getBean("userService");
+
+        userService.queryUserInfo();
+
+        UserService userService_singleton = (UserService) factory.getBean("userService");
+
+        userService_singleton.queryUserInfo();
+
     }
 }
